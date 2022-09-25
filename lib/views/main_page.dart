@@ -127,6 +127,20 @@ class _MainPageState extends State<MainPage> {
                                             fontWeight: FontWeight.normal),
                                         overflow: TextOverflow.ellipsis,
                                       ),
+                                      const SizedBox(
+                                        height: 10,
+                                      ),
+                                      Text(
+                                        context
+                                            .watch<NoteController>()
+                                            .listOfNotes[index]
+                                            .time
+                                            .toString(),
+                                        style: const TextStyle(
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.normal),
+                                        overflow: TextOverflow.visible,
+                                      ),
                                     ],
                                   ),
                                 ),
